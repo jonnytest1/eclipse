@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+	<extension
+         point="org.eclipse.ui.preferencePages">
+      <page 
+            id="socialdear.properties"
+            name="SocialDear">
+      </page>
+      <page
+            class="cfg.BuildSettings"
+            id="cfg.BuildSettings"
+            category="socialdear.properties"
+            name="Build Properties">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+       <category
+            name="PluiginDev"
+            id="plugin_dev">
+      </category>
+      <view
+            class="views.CustomBuildViewPart"
+            name="CustomBuild"
+            id="dev.build"
+            category="plugin_dev"
+            inject="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+   </extension>
+</plugin>

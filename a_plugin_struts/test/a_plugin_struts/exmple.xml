@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page type="standard" module="service-archive" helpTopic="archive/default" xmlns:ly="http://multivisual.de/ns/layout" xmlns:in="http://multivisual.de/ns/input" xmlns:g="http://multivisual.de/ns/generate-page">
+
+	<g:add-to-navbar description-key="archive.pagetitle.{form('currentMask')}" />
+
+	<ly:layout type="inputmask" g:alt-key="archive.pagetitle.{form('currentMask')}">
+		<in:form g:action-page="/service/addressupload" enctype="multipart/form-data" target="blank">
+
+			<ly:group type="top">
+				<ly:field>
+					<label g:content-key="select.label.selection" />
+				</ly:field>
+			</ly:group>
+
+			<ly:group>
+				<g:errors />
+			</ly:group>
+
+			<ly:group>
+				<ly:field>
+					<text g:content-key="service.text.addressupload.description" />
+				</ly:field>
+				<ly:field>
+					<label g:content-key="service.label.addressupload" />
+					<ly:item type="horizontal">
+						<in:input type="file" g:property="addressZipFile" />
+						<in:submit code="doImportDocumentsFromZip"  g:alt-key="button.service.archive.import.alt" />
+					</ly:item>
+				</ly:field>
+				<ly:field>
+					<label g:content-key="service.label.addressupload.setcheckpassed"/>
+					<in:input type="checkbox" g:property="setCheckPassed" value="true">
+						<text g:content-key="service.label.addressupload.setcheckpassedyes"/>
+					</in:input>
+				</ly:field>
+			</ly:group>
+
+		</in:form>
+		<in:form g:action-page="/service-prepare" name="backnavigation">
+			<ly:group>
+				<ly:field type="buttonline" inline="yes">
+					<in:submit code="doPrevious"  g:alt-key="button.previous.alt" />
+				</ly:field>
+			</ly:group>
+
+		</in:form>
+	</ly:layout>
+
+</page>

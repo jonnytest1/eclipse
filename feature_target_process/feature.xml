@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="feature_target_process"
+      label="feature_target_process"
+      version="2.0.2.qualifier"
+      plugin="a_plugin_target_process">
+
+   <description url="http://www.example.com/description">
+      [Enter Feature Description here.]
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <requires>
+      <import plugin="org.eclipse.ui"/>
+      <import plugin="org.eclipse.core.runtime"/>
+      <import plugin="org.eclipse.egit" version="5.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.egit.core" version="5.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.egit.ui" version="5.4.0" match="greaterOrEqual"/>
+      <import plugin="org.eclipse.core.resources" version="3.13.400" match="greaterOrEqual"/>
+   </requires>
+
+   <plugin
+         id="a_plugin_target_process"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+   <plugin
+         id="a_plugin_base"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"/>
+
+</feature>

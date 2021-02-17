@@ -1,0 +1,18 @@
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+
+@Injectable()
+export class _service_class_ {
+
+	constructor(private http: HttpClient) {
+	}
+
+	public getData(): Observable<any> {
+		return this.http.get(`rest/_restpath_/data`);
+	}
+
+	public submit(data: any): Observable<any> {
+		return this.http.post(`rest/_restpath_/data`, data);
+	}
+}

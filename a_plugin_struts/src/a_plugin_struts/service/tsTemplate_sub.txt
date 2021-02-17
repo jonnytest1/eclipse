@@ -1,0 +1,59 @@
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+_service_import_line_
+@Component({
+	selector: '_selector_',
+	templateUrl: './_component_file_.component.html',
+	styleUrls: ['./_component_file_.component.less'],
+	changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class _class_name_ implements OnInit {
+
+	@Input()
+	data: { [key: string]: any };
+
+	constructor() {
+_constructor_entrypoint_
+	}
+
+	ngOnInit(): void {
+
+	}
+
+	async submit(action: string, event: Event): Promise<void> {
+		this.data.actionCode = action;
+		const form: HTMLFormElement = this.getForm(event);
+		form.action = window.context + '/konfiguration-branching.do';
+		for (const i in this.data) {
+			if (i === 'actionCode') {
+				const inputELement: HTMLInputElement = document.createElement('input');
+				inputELement.hidden = true;
+				inputELement.name = i;
+				inputELement.value = this.data[i];
+				form.appendChild(inputELement);
+			}
+		}
+		$(document)
+			.trigger('formSubmit', {
+				form: $(form),
+				ajaxReloadElement: undefined
+			});
+
+	}
+
+	private getForm(event: any): HTMLFormElement {
+		let element: HTMLElement = event.target;
+		while (element.tagName !== 'FORM') {
+			element = element.parentElement;
+		}
+		return element as HTMLFormElement;
+	}
+
+	form(key: string): any {
+		return this.data[key];
+	}
+
+	not(val: any): any {
+		return !val;
+	}
+_method_entrypoint_
+}

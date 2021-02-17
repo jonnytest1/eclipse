@@ -1,0 +1,39 @@
+/bin
+/.gradle/
+/build/
+
+/lib/base/
+/built/plugins
+base
+/${buildDirectory}/nestedJars/org.eclipse.jdt.compiler.tool_1.2.200.v20180512-1206/lib
+Standard Simple Plugin Test
+.metadata/*
+!.metadata/.plugins
+.metadata/.plugins/*
+!.metadata/.plugins/org.eclipse.debug.core
+.recommenders
+.sonarlint
+gradle plugin test
+gradle test
+RemoteSystemsTempFiles
+*.class
+**/.settings/*
+**/.gradle/*
+**/gradle/wrapper/**
+**/.externalToolBuilders/*
+SocialDearTesting
+build
+contrib
+bin
+*.zip
+docs
+conf
+/SocialDearUpdateSite/nginx.exe
+.metadata - working workspace settings
+/.metadata/
+site/plugins
+site/features
+site/*jar
+built
+fileUploader
+fallbackjsons

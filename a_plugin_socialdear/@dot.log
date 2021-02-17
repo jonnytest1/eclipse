@@ -1,0 +1,74 @@
+# 08.10.18 00:34:36 MESZ
+# Eclipse Compiler for Java(TM) v20180528-0519, 3.14.0, Copyright IBM Corp 2000, 2015. All rights reserved.
+----------
+1. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\component\SideBarComponent.java (at line 54)
+	private ModelAnalyzer analyzer;
+	                      ^^^^^^^^
+The value of the field SideBarComponent.analyzer is not used
+----------
+2. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\component\SideBarComponent.java (at line 56)
+	private DatabaseComponent databaseComponent;
+	                          ^^^^^^^^^^^^^^^^^
+The value of the field SideBarComponent.databaseComponent is not used
+----------
+3. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\component\SideBarComponent.java (at line 98)
+	@SuppressWarnings("restriction")
+	                  ^^^^^^^^^^^^^
+Unnecessary @SuppressWarnings("restriction")
+----------
+----------
+4. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\component\TableComponent.java (at line 84)
+	JComponent top = jLine;
+	           ^^^
+The value of the local variable top is not used
+----------
+----------
+5. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\sql\ModelAnalyzer.java (at line 63)
+	private IProject project;
+	                 ^^^^^^^
+The value of the field ModelAnalyzer.project is not used
+----------
+6. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\sql\ModelAnalyzer.java (at line 64)
+	private List<SQLCommand> commands;
+	                         ^^^^^^^^
+The value of the field ModelAnalyzer.commands is not used
+----------
+----------
+7. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\testplugin\View.java (at line 19)
+	private MigrationLogic migrationLogic;
+	                       ^^^^^^^^^^^^^^
+The value of the field View.migrationLogic is not used
+----------
+8. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\testplugin\View.java (at line 24)
+	private ContentViewer viewer;
+	                      ^^^^^^
+The value of the field View.viewer is not used
+----------
+9. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\testplugin\View.java (at line 26)
+	private Composite parent;
+	                  ^^^^^^
+The value of the field View.parent is not used
+----------
+10. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\testplugin\View.java (at line 30)
+	private class StringLabelProvider extends ColumnLabelProvider {
+	              ^^^^^^^^^^^^^^^^^^^
+The type View.StringLabelProvider is never used locally
+----------
+----------
+11. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\util\CustomPanel.java (at line 121)
+	SpringLayout layout = parent.getSpringLayout();
+	             ^^^^^^
+The value of the local variable layout is not used
+----------
+----------
+12. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\util\FileParser.java (at line 136)
+	URLClassLoader loader = getClassLoader(javaProject);
+	               ^^^^^^
+The value of the local variable loader is not used
+----------
+13. WARNING in D:\Jonathan\Projects\eclipse\plugins\testMigration\src\util\FileParser.java (at line 173)
+	private static List<File> getAllFiles(File folder) {
+	                          ^^^^^^^^^^^^^^^^^^^^^^^^
+The method getAllFiles(File) from the type FileParser is never used locally
+----------
+13 problems (13 warnings)

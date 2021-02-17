@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="SocialDear"
+            id="socialdear">
+      </category>
+      <category
+            name="PluiginDev"
+            id="plugindev">
+      </category>
+      <view
+            class="socialdear.views.component.implemented.DisplayAllIcons"
+            name="Debug_DisplayIcons"
+            id="socialdear.debug.icons"
+            category="plugindev"
+            inject="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="perspectives.PluginPerspective"
+            icon="icons/releng_gears.gif"
+            id="socialdear.perspectives.PluginPerspective"
+            name="PluginPerspective">
+      </perspective>
+   </extension>
+</plugin>

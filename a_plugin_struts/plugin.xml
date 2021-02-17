@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension
+         point="org.eclipse.ui.views">
+      <category
+            name="SocialDear"
+            id="socialdear">
+      </category>
+      <view
+            class="a_plugin_struts.views.StrutsViewPart"
+            name="Struts"
+            id="transform.struts"
+            category="socialdear"
+            inject="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page 
+            id="socialdear.properties"
+            name="SocialDear">
+      </page>
+      <page
+            class="a_plugin_struts.StrutsProperties"
+            id="socialdear.properties.struts"
+            category="socialdear.properties"
+            name="Struts">
+      </page>
+   </extension>
+</plugin>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/SocialDearFeaturePRoject2_1.0.1.qualifier.jar" id="SocialDearFeaturePRoject2" version="1.0.1.qualifier">
+      <category name="new_category_1"/>
+   </feature>
+   <bundle id="SocialDear" version="1.0.1.qualifier">
+      <category name="new_category_1"/>
+   </bundle>
+   <category-def name="new_category_1" label="New Category 1">
+      <description>
+         category le awesome
+      </description>
+   </category-def>
+</site>

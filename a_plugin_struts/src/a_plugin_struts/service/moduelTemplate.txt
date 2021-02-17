@@ -1,0 +1,19 @@
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+_import_entrypoint_
+_import_class_entrypoint_
+import { _service_class_ } from './_service_import_file_';
+
+@NgModule({
+	imports: [
+		CommonModule,
+		FormsModule,
+_import_module_point_
+	],
+	providers: [_service_class_],
+	declarations: [
+_name_of_component_for_module_
+	],
+})
+export class _modulename_ { }

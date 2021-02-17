@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension
+         point="org.eclipse.ui.preferencePages">
+     <page 
+            class="cfg.SystemSettings"
+            id="socialdear.properties"
+            name="SocialDear">
+     </page>
+   </extension>
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="views.migration.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="SocialDear"
+            id="socialdear">
+      </category>
+      <view
+            class="views.migration.View"
+            name="MigrationView"
+            id="socialdear.view"
+            category="socialdear"
+            inject="false">
+      </view>
+      <view
+            class="views.launcher.LauncherView" 
+            name="Launcher"
+            id="socialdear.launcher"
+            category="socialdear"
+            inject="true">
+      </view>
+      <view
+            class="views.logging.LoggingView"
+            name="Logging"
+            id="socialdear.logging"
+            category="socialdear"
+            inject="false">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.adapters">
+   </extension>
+   
+
+</plugin>

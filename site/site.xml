@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="update site">
+      awesome plugin
+   </description>
+   <feature url="features/feature_build_1.0.1.202102171419.jar" id="feature_build" version="1.0.1.202102171419">
+      <category name="socialdear.category"/>
+   </feature>
+   <feature url="features/feature_socialdear_1.2.2.202102171419.jar" id="feature_socialdear" version="1.2.2.202102171419">
+      <category name="socialdear.category"/>
+   </feature>
+   <feature url="features/feature_target_process_2.0.2.202102171419.jar" id="feature_target_process" version="2.0.2.202102171419">
+      <category name="socialdear.category"/>
+   </feature>
+   <feature url="features/feature_Struts_1.0.0.202102171419.jar" id="feature_Struts" version="1.0.0.202102171419">
+      <category name="socialdear.category"/>
+   </feature>
+   <category-def name="socialdear.category" label="SocialDear">
+      <description>
+         socialdear
+      </description>
+   </category-def>
+</site>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension
+         point="org.eclipse.ui.preferencePages">
+      <page 
+            id="socialdear.properties"
+            name="SocialDear">
+      </page>
+      <page
+            class="cfg_tp.SystemSettings"
+            id="socialdear.properties.tp"
+            category="socialdear.properties"
+            name="Target Process">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="SocialDear"
+            id="socialdear">
+      </category>
+      <view
+            class="views.current.CurrentlyActiveViewPart"
+            name="CurrentlyActive"
+            id="socialdear.view.currentlyActive"
+            category="socialdear"
+            inject="false">
+      </view>
+      <view
+            class="views.dbpicker.ViewPart"
+            name="DB Picker"
+            id="socialdear.view.dbpicker"
+            category="socialdear"
+            inject="true">
+      </view>
+       <view
+            class="views.sap.SAPViewPart"
+            name="SAP"
+            id="socialdear.view.sap"
+            category="socialdear"
+            inject="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="TargetProcessIntegrationPlugin.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="TargetProcessIntegrationPlugin.commands.category"
+            name="Sample Command"
+            id="TargetProcessIntegrationPlugin.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="TargetProcessIntegrationPlugin.commands.sampleCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         id="socialdear.commit.provider"
+         name="commitMessageProvider01"
+         point="org.eclipse.egit.ui.commitMessageProvider">
+         <commitMessageProvider
+        	class="cfg_tp.EGitRepository">
+  		</commitMessageProvider>
+   </extension>
+   <extension point="org.eclipse.ui.startup">
+   	 	<startup class="service.StartupClass"/>
+   </extension>
+</plugin>

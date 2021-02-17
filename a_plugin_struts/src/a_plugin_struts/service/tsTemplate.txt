@@ -1,0 +1,72 @@
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { RoutedPage } from '_path_level_shared_shared/routed-page/routed-page';
+import { ApplicationState } from '_path_level_shared_shared/store/application-state';
+
+import { _service_class_ } from './_service_import_file_';
+
+@Component({
+	selector: '_selector_',
+	templateUrl: './_component_file_.component.html',
+	styleUrls: ['./_component_file_.component.less'],
+	changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class _class_name_ extends RoutedPage<any> implements OnInit {
+
+	data: { [key: string]: any };
+
+	constructor(
+		private _service_name_: _service_class_,
+		private cdr: ChangeDetectorRef,
+		store: Store<ApplicationState>,
+		activatedRoute: ActivatedRoute,
+		router: Router,
+	) {
+		super(store, activatedRoute, router);
+		this._service_name_.getData()
+			.subscribe((data) => {
+				this.data = data;
+				this.cdr.detectChanges();
+			});
+_constructor_entrypoint_
+	}
+
+	async submit(action: string, event: Event): Promise<void> {
+		this.data.actionCode = action;
+		const form: HTMLFormElement = this.getForm(event);
+		form.action = window.context + '/konfiguration-branching.do';
+		for (const i in this.data) {
+			if (i === 'actionCode') {
+				const inputELement: HTMLInputElement = document.createElement('input');
+				inputELement.hidden = true;
+				inputELement.name = i;
+				inputELement.value = this.data[i];
+				form.appendChild(inputELement);
+			}
+		}
+		$(document)
+			.trigger('formSubmit', {
+				form: $(form),
+				ajaxReloadElement: undefined
+			});
+
+	}
+
+	private getForm(event: any): HTMLFormElement {
+		let element: HTMLElement = event.target;
+		while (element.tagName !== 'FORM') {
+			element = element.parentElement;
+		}
+		return element as HTMLFormElement;
+	}
+
+	form(key: string): any {
+		return this.data[key];
+	}
+
+	not(val: any): any {
+		return !val;
+	}
+_method_entrypoint_
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="feature_socialdear"
+      label="feature_socialdear"
+      version="1.2.2.qualifier"
+      plugin="a_plugin_socialdear">
+
+   <description url="http://www.example.com/description">
+      Flyway auto migration
+marathon auto debug connector
+kibana logging
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      whatever take it and leave :P
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      no clue
+I dont guarantee anything to anyone
+   </license>
+
+   <plugin
+         id="a_plugin_base"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+   <plugin
+         id="a_plugin_socialdear"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>
